@@ -1,7 +1,7 @@
 package main
 
 import (
-  "fmt"
+	"fmt"
 	"log"
 	"net/http"
 
@@ -14,10 +14,9 @@ func main() {
 	if err != nil {
 		log.Println(err)
 	}
-	fmt.Println("Text:")
-	fmt.Printf(someText)
+	fmt.Println("Text:", someText)
   info := whatlanggo.Detect(someText)
-  fmt.Println("Language:", info.Lang.String(), "ISO: ", info.Lang.Iso6391(), " Confidence: ", info.Confidence)
+  fmt.Println("Language:", info.Lang.String(), "|", "ISO:", info.Lang.Iso6391(), "|", "Confidence:", info.Confidence)
 }
 
 // GetSomeText gets text using a selector and returns it.
